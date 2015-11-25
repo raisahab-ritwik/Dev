@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#0477C0">
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+	</LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/headerLay"
+        android:visibility="visible"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+         <ImageView
+            android:id="@+id/mailImg"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/back"
+            android:visibility="invisible"
+            android:background="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="HEART RATE"
+            android:textColor="#023B60"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/subheaderLay"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:visibility="invisible"
+            android:textSize="32dp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+			
+            <com.wrc.heartratemonitor.HeartbeatView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+ 
+<RelativeLayout
+    android:layout_below="@+id/top"
+    android:layout_above="@+id/footerLay"
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:id="@+id/layout">
+    
+	<TextView
+        android:id="@+id/preview1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Calculating..."
+        android:gravity="center"
+        android:visibility="gone"
+         >
+    </TextView>
+    
+        
+        <SurfaceView android:id="@+id/preview"
+        
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:visibility="visible">
+	</SurfaceView>
+
+        <RelativeLayout
+            android:id="@+id/menu_icon"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="#0477C0"
+             >
+
+            <ImageView
+                android:id="@+id/heartImage"
+                android:layout_margin="10dp"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_centerHorizontal="true"
+                
+                 />
+            
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/heartImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:hint="Your heart rate"
+                android:gravity="center"
+                android:textColorHint="#FFF"
+                android:textColor="#FFF"
+                android:textSize="32sp" />
+        </RelativeLayout>
+	
+</RelativeLayout>
+
+<LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer2" />
+    </LinearLayout>
+     
+
+</RelativeLayout>

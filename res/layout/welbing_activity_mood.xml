@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#0477C0">
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+	</LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:visibility="gone"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+         <ImageView
+            android:id="@+id/mailImg"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/back"
+            android:visibility="invisible"
+            android:background="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="WELL BING"
+            android:textColor="#023B60"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
+    </RelativeLayout>
+    
+ <LinearLayout
+        android:id="@+id/subheaderLay1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/subheaderLay"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+     
+     <Button
+            android:id="@+id/task_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="WELLBEING"
+            android:background="#FFF"
+            android:textColor="#5A7F97" />
+
+        <Button
+            android:id="@+id/static_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="STATISTICS"
+            android:textSize="20sp"
+            android:textColor="#FFF"
+            android:background="#023B60" />
+       
+    </LinearLayout>
+    
+ <LinearLayout
+        android:id="@+id/subheaderLay2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/subheaderLay1"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+        
+		<RelativeLayout
+       			 android:id="@+id/wel_water_btn"
+       			 android:layout_width="fill_parent"
+    		    android:layout_height="50dp"
+    		    android:layout_weight="1"
+    		    android:gravity="center"
+    		    android:background="#FFF">
+    		    
+  		      		<ImageView 
+  		      		    android:id="@+id/img_water_btn"
+       			 		android:layout_width="16dp"
+    		    		android:layout_height="15dp"
+    		    		android:layout_marginLeft="5dp"
+  		      		    android:background="@drawable/sleep_gray_icon"
+  		      		    android:layout_centerVertical="true"
+  		      		    
+  		      		    />
+   				     <Button 
+   				         android:id="@+id/btn_water_btn"
+       			 		android:layout_width="wrap_content"
+    		    		android:layout_height="wrap_content"
+    		    		android:layout_marginLeft="5dp"
+    		    		android:text="SLEEP"
+    		    		android:textStyle="bold"
+           				android:textSize="15sp"
+            			android:textAppearance="?android:attr/textAppearanceMedium"
+    		    		android:background="#FFF"
+    		    		android:textColor="#000"
+   				        android:layout_toRightOf="@+id/img_water_btn"
+   				        android:layout_centerVertical="true"
+   				         />
+   				     
+  		      	</RelativeLayout>
+  		      	
+		<RelativeLayout
+       			 android:id="@+id/wel_ex_btn"
+       			 android:layout_width="fill_parent"
+    		    android:layout_height="50dp"
+    		    android:layout_weight="1"
+    		    android:gravity="center"
+    		    android:background="#FFF">
+    		    
+  		      		<ImageView 
+  		      		    android:id="@+id/img_ex_btn"
+       			 		android:layout_width="16dp"
+    		    		android:layout_height="15dp"
+    		    		android:layout_marginLeft="5dp"
+  		      		    android:background="@drawable/well_tab_ex"
+  		      		    android:layout_centerVertical="true"
+  		      		    
+  		      		    />
+   				     <Button 
+   				         android:id="@+id/btn_ex_btn"
+       			 		android:layout_width="wrap_content"
+    		    		android:layout_height="wrap_content"
+    		    		android:layout_marginLeft="5dp"
+    		    		android:text="EXERCISE"
+    		    		android:textStyle="bold"
+           				android:textSize="15sp"
+            			android:textAppearance="?android:attr/textAppearanceMedium"
+    		    		android:background="#FFF"
+    		    		android:textColor="#000"
+   				        android:layout_toRightOf="@+id/img_ex_btn"
+   				        android:layout_centerVertical="true"
+   				         />
+   				     
+  		      	</RelativeLayout>
+		
+		
+		<RelativeLayout
+       			 android:id="@+id/wel_mood_btn"
+       			 android:layout_width="fill_parent"
+    		    android:layout_height="50dp"
+    		    android:layout_weight="1"
+    		    android:gravity="center"
+    		    android:background="@drawable/bottom_line_lay_tab">
+    		    
+  		      		<ImageView 
+  		      		    android:id="@+id/img_mood_btn"
+       			 		android:layout_width="16dp"
+    		    		android:layout_height="15dp"
+    		    		android:layout_marginLeft="5dp"
+  		      		    android:background="@drawable/well_tab_mood1"
+  		      		    android:layout_centerVertical="true"
+  		      		    
+  		      		    />
+   				     <Button 
+   				         android:id="@+id/btn_mood_btn"
+       			 		android:layout_width="wrap_content"
+    		    		android:layout_height="wrap_content"
+    		    		android:layout_marginLeft="5dp"
+    		    		android:text="MOOD"
+    		    		android:textStyle="bold"
+           				android:textSize="15sp"
+            			android:textAppearance="?android:attr/textAppearanceMedium"
+    		    		android:background="#FFF"
+    		    		android:textColor="#EB8F01"
+   				        android:layout_toRightOf="@+id/img_mood_btn"
+   				        android:layout_centerVertical="true"
+   				         />
+   				     
+  		      	</RelativeLayout>
+		
+		
+    </LinearLayout>
+ 
+            <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/subheaderLay2"
+            android:layout_above="@+id/footerLay"
+            android:background="#0477C0">
+
+                    <RelativeLayout 
+                    android:id="@+id/image_lay"
+            		android:layout_width="138dp"
+            		android:layout_height="138dp" 
+            		android:layout_marginTop="20dp"
+            		android:layout_alignParentTop="true"
+            		android:layout_centerHorizontal="true"
+                        >
+
+                        <ImageView
+                            android:id="@+id/welbing_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/welbing3" />
+                        
+                    </RelativeLayout>
+                    
+                    <RelativeLayout 
+                    android:id="@+id/text_lay"
+            		android:layout_width="match_parent"
+            		android:layout_height="wrap_content"
+            		android:layout_below="@+id/image_lay"
+            		android:layout_marginTop="10dp"
+            		android:gravity="center"
+            		>
+                     <TextView 
+                     android:id="@+id/text_welbing"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="HOW IS YOUR MOOD NOW ?"
+            		android:textColor="#FFF"
+           			android:textStyle="bold"
+           			android:textSize="20sp"
+            		android:textAppearance="?android:attr/textAppearanceMedium"
+                         />   
+                        
+                    </RelativeLayout>
+                    
+                    <LinearLayout
+    				android:id="@+id/button_lay"
+    				android:layout_width="fill_parent"
+   					android:layout_height="wrap_content"
+    				android:layout_marginTop="15dp"
+    				android:layout_marginBottom="20dp"
+    				android:layout_below="@+id/text_lay"
+   					android:orientation="horizontal" >
+
+                        
+   				 <RelativeLayout
+       			 android:id="@+id/wel_btn"
+       			 android:layout_width="wrap_content"
+    		    android:layout_height="40dp"
+    		    android:layout_marginLeft="20dp"
+    		    android:layout_weight="1"
+    		    android:gravity="center"
+    		    android:background="@drawable/button_border_white_round">
+    		    
+  		      		<ImageView 
+  		      		    android:id="@+id/img_wel_btn"
+       			 		android:layout_width="16dp"
+    		    		android:layout_height="15dp"
+    		    		android:layout_marginLeft="5dp"
+  		      		    android:background="@drawable/well_bad"
+  		      		    android:layout_centerVertical="true"
+  		      		    
+  		      		    />
+   				     <Button 
+   				         android:id="@+id/btn_wel_btn"
+       			 		android:layout_width="wrap_content"
+    		    		android:layout_height="wrap_content"
+    		    		android:layout_marginLeft="5dp"
+    		    		android:text="SAD"
+    		    		android:textStyle="bold"
+           				android:textSize="20sp"
+            			android:textAppearance="?android:attr/textAppearanceMedium"
+    		    		android:background="#FFF"
+    		    		android:textColor="#023B60"
+   				        android:layout_toRightOf="@+id/img_wel_btn"
+   				        android:layout_centerVertical="true"
+   				         />
+   				     
+  		      	</RelativeLayout>
+
+  				  <RelativeLayout
+   			     android:id="@+id/wel_btn2"
+   			     android:layout_width="wrap_content"
+   			     android:layout_height="40dp"
+  			      android:layout_weight="1"
+  			      android:background="@drawable/button_border_white_round"
+  			      android:gravity="center"
+  			      android:layout_marginLeft="10dp"
+  			    
+  			      >
+  			      
+  				      <ImageView 
+  		      		    android:id="@+id/img_wel_btn2"
+       			 		android:layout_width="15dp"
+    		    		android:layout_height="15dp"
+    		    		android:layout_marginLeft="5dp"
+  		      		    android:background="@drawable/well_okay"
+  		      		   android:layout_centerVertical="true"
+  		      		    />
+   				     <Button 
+   				         android:id="@+id/btn_wel_btn2"
+       			 		android:layout_width="wrap_content"
+    		    		android:layout_height="30dp"
+    		    		android:layout_marginLeft="5dp"
+    		    		android:text="OKAY"
+    		    		android:textStyle="bold"
+           				android:textSize="20sp"
+            			android:textAppearance="?android:attr/textAppearanceMedium"
+    		    		android:background="#FFF"
+    		    		android:textColor="#023B60"
+   				        android:layout_toRightOf="@+id/img_wel_btn2"
+   				        android:layout_centerVertical="true"
+   				         />
+  				      
+  			      </RelativeLayout>
+  			      
+  				  <RelativeLayout
+       			 android:id="@+id/wel_btn3"
+       			 android:layout_width="wrap_content"
+    		    android:layout_height="40dp"
+    		    android:layout_marginLeft="10dp"
+    		      android:layout_marginRight="20dp"
+    		    android:layout_weight="1"
+    		    android:gravity="center"
+    		    android:background="@drawable/button_border_white_round">
+    		    
+  		      		<ImageView 
+  		      		    android:id="@+id/img_wel_btn3"
+       			 		android:layout_width="16dp"
+    		    		android:layout_height="15dp"
+    		    		android:layout_marginLeft="5dp"
+  		      		    android:background="@drawable/well_good"
+  		      		    android:layout_centerVertical="true"
+  		      		    
+  		      		    />
+   				     <Button 
+   				         android:id="@+id/btn_wel_btn3"
+       			 		android:layout_width="wrap_content"
+    		    		android:layout_height="wrap_content"
+    		    		android:layout_marginLeft="5dp"
+    		    		android:text="GOOD"
+    		    		android:textStyle="bold"
+           				android:textSize="20sp"
+            			android:textAppearance="?android:attr/textAppearanceMedium"
+    		    		android:background="#FFF"
+    		    		android:textColor="#023B60"
+   				        android:layout_toRightOf="@+id/img_wel_btn3"
+   				        android:layout_centerVertical="true"
+   				         />
+   				     
+  		      	</RelativeLayout>
+  				  
+  				  
+				</LinearLayout>
+                    
+                    
+                    
+             
+           
+        </RelativeLayout>
+        
+    
+            
+    <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer" />
+    </LinearLayout>
+     
+
+</RelativeLayout>
+
+ 

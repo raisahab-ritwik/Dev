@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.wrc.seva60hum.MainActivity"
+    android:background="#0477C0" >
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+</LinearLayout>
+
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="DOCTOR SPEAKS"
+            android:textStyle="bold"
+            android:textColor="#023B60"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
+    </RelativeLayout>
+
+    <LinearLayout 
+			android:id="@+id/content_close"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="#0477C0"
+            android:layout_below="@+id/subheaderLay"
+            android:layout_above="@+id/footerLay"
+            android:orientation="vertical" >
+
+    
+<LinearLayout 
+			android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="#0477C0"
+            
+            android:orientation="vertical" >
+ <WebView
+                android:id="@+id/webView1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none" />
+
+          
+            
+        </LinearLayout>
+   </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer" />
+    </LinearLayout>
+</RelativeLayout>

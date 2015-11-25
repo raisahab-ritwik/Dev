@@ -1,0 +1,312 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.wrc.seva60hum.MainActivity"
+    android:background="#0477C0" >
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+	</LinearLayout>
+
+    <ScrollView 
+        android:id="@+id/all_btn_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerLay"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="none"
+        android:orientation="vertical">
+    
+     
+     <LinearLayout 
+        android:id="@+id/all_btn_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay1"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/pill_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/pill_reminder">
+
+        <TextView
+            android:id="@+id/pill_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:paddingBottom="10dp"
+            android:text="PILL REMINDER"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/offer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/offers">
+        
+        <TextView
+            android:id="@+id/offer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="SPECIAL OFFERS"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay2"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/sathi_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/sathi">
+        
+        <TextView
+            android:id="@+id/sathi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="SAATHI"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/well_bing_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/well_bing">
+        <TextView
+            android:id="@+id/well_bing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="WELLBEING"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+        
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay3"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/knownledge_base_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        
+        android:background="@drawable/knowledge_base">
+
+        <TextView
+            android:id="@+id/knowledge_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:gravity="center_vertical"
+            android:text="MEDIA CENTRE"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp" />
+
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/nearby_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/nearby">
+        <TextView
+            android:id="@+id/nearby_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="NEARBY"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay4"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/location_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/location">
+        
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="SHARE LOCATION"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/utilities_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/utilities">
+        
+        <TextView
+            android:id="@+id/utilities_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="UTILITIES"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay5"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/money_reminder_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/money_reminder">
+        
+        <TextView
+            android:id="@+id/money_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="REMINDER"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/seva60_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/seva60_about">
+        
+        <TextView
+            android:id="@+id/seva_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="HELP DESK"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+   
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

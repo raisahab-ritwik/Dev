@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/header" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/back_icon"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/mailImg"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/addImg"
+            android:background="@drawable/mail"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="NEW REMINDERS"
+            android:textSize="25sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#023B60"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/body_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footerLay"
+        android:layout_below="@+id/subheaderLay"
+        android:background="#EFEFF4" >
+
+        <ScrollView
+            android:id="@+id/all_btn_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/laySavebutton"
+            android:layout_alignParentTop="true"
+            android:isScrollContainer="true" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EFEFF4"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/shortDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/apptheme_textfield_activated_holo_light"
+                    android:ems="10"
+                    android:textSize="25sp"
+                    android:gravity="center_vertical|center"
+                    android:hint="Enter a short desc abt reminder"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:background="#035386" />
+
+                <EditText
+                    android:id="@+id/detailedDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/apptheme_textfield_activated_holo_light"
+                    android:ems="10"
+                    android:textSize="25sp"
+                    android:gravity="center_vertical|center"
+                    android:hint="Give detailed desc here 1 or more lines"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:textColor="#000"
+                    android:textColorHint="#000" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:visibility="gone"
+                    android:background="#035386" />
+
+                <CheckBox
+                    android:id="@+id/remDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detailedDesc"
+                    android:layout_marginTop="26dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:focusable="true"
+                    android:textSize="25sp"
+                    android:focusableInTouchMode="false"
+                    android:onClick="getAlarmTime"
+                    android:button="@drawable/checkbox_selector1"
+                    android:textColor="#000"
+                    android:text="      Set Alarm" />
+
+                <Spinner
+                    android:id="@+id/remType"
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                   android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/apptheme_spinner_default_holo_light"
+                    android:entries="@array/str_arr_repeat_type"
+                    android:prompt="@string/str_repeat" />
+            </LinearLayout>
+        </ScrollView>
+        
+        <LinearLayout
+                    android:id="@+id/laySavebutton"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:background="#404041"
+                        android:onClick="addNewReminder"
+                        android:text="SAVE"
+                        android:textColor="#FFF"
+                        android:textSize="25sp" />
+                </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer2" />
+    </LinearLayout>
+
+</RelativeLayout>

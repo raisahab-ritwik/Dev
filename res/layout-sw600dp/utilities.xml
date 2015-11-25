@@ -1,0 +1,362 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.wrc.seva60hum.MainActivity"
+    android:background="#0477C0" >
+    
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+</LinearLayout>
+
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="UTILITIES"
+            android:textColor="#023B60"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
+        
+        
+        
+    </RelativeLayout>
+
+    <ScrollView 
+        android:id="@+id/all_btn_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subheaderLay"
+        android:layout_above="@+id/footerLay"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        
+        android:orientation="vertical">
+    
+     
+     <LinearLayout 
+        android:id="@+id/all_btn_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+    
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay1"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/tourch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/tourch">
+        
+        <TextView
+            android:id="@+id/tourch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="TORCH"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout
+            android:id="@+id/heartbeat_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/heartbeat" >
+
+            <TextView
+                android:id="@+id/heart_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="14dp"
+                android:paddingBottom="10dp"
+                android:text="HEART BEAT"
+                android:textColor="#0477C0"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay2"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/pedometer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/pedometer">
+        
+        <TextView
+            android:id="@+id/pedo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="PEDOMETER"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/calculator_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/calculator">
+        
+        <TextView
+            android:id="@+id/calculator_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="CALCULATOR"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+     <RelativeLayout
+        android:id="@+id/calender_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/calender">
+        
+        <TextView
+            android:id="@+id/calender_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="CALENDER"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    
+    <RelativeLayout
+        android:id="@+id/camera_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/camera">
+        
+        <TextView
+            android:id="@+id/camenra_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="CAMERA"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/videoplayer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/videoplayer">
+        
+        <TextView
+            android:id="@+id/video_player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="VIDEO PLAYER"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/musicplayer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/musicplayer">
+        
+        <TextView
+            android:id="@+id/music_player_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="MUSIC PLAYER"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+    
+    </LinearLayout>
+    
+    
+    <LinearLayout 
+        android:id="@+id/btn_lay5"
+        android:layout_width="fill_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/contact_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/contact">
+        
+        <TextView
+            android:id="@+id/contact_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
+            android:text="CONTACT"
+            android:paddingBottom="10dp"
+            android:textColor="#0477C0"
+            android:textSize="15sp"
+             />
+        
+        </RelativeLayout>
+        
+    <RelativeLayout
+            android:id="@+id/weather_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:background="@drawable/weather_icon" >
+
+            <TextView
+                android:id="@+id/weather_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="14dp"
+                android:paddingBottom="10dp"
+                android:text="WEATHER"
+                android:textColor="#0477C0"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    
+    
+   
+    </LinearLayout>
+    
+   
+    </LinearLayout>
+</ScrollView>
+
+    
+      <LinearLayout
+        android:id="@+id/footerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/footer2" />
+    </LinearLayout>     
+</RelativeLayout>

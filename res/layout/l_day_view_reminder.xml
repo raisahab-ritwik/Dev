@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent">
+    
+    <LinearLayout 
+        android:id="@+id/headerLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+     <include layout="@layout/header"/>
+	</LinearLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/subheaderLay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/headerLay"
+        android:background="#FFF">
+        
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:background="@drawable/back_icon"
+           	android:visibility="visible"
+            android:textColor="#FFF" />
+         <ImageView
+            android:id="@+id/mailImg"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/back"
+            android:visibility="invisible"
+            android:background="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="REMINDERS"
+            android:textColor="#023B60"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        
+    </RelativeLayout>
+    
+  <!--   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+         android:background="#FFFFFF"  
+         android:layout_below="@+id/subheaderLay">
+     
+
+        <ImageView
+            android:id="@+id/appImg"
+              android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+         
+            android:src="@drawable/bubloo" />
+
+        <ImageView
+            android:id="@+id/mailImg1"
+            android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_toRightOf="@+id/appImg"
+            android:text="  Do it Bubloo !!! "
+            android:textColor="#000000"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/addImg1"
+            android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/mailImg1"
+            android:src="@drawable/add" />
+
+	</RelativeLayout>
+ -->
+            <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subheaderLay"
+            android:layout_above="@+id/button_lay"
+            android:background="#22A7F0">
+
+           <Button 
+               android:id="@+id/lvImage"  
+                android:layout_height="200dp"
+        	    android:layout_centerInParent="true"
+                android:layout_width="200dp"
+                android:background="@drawable/no_circle"
+               android:visibility="invisible"
+               android:text="NO\nREMINDER\nYET"
+               android:textSize="25sp"
+               android:padding="20dp"
+               android:textColor="#014E78"
+               />
+          
+                
+            <ExpandableListView
+                android:id="@+id/lvExp"  
+                android:layout_height="wrap_content"
+        	    android:layout_alignParentLeft="true"
+                android:layout_width="match_parent"
+                /> 
+        </RelativeLayout>
+        
+    
+            
+    <LinearLayout
+    android:id="@+id/button_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:orientation="horizontal" >
+
+    
+    <Button
+        android:id="@+id/addImg"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="#404041"
+        android:text="ADD REMINDER"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFF" />
+</LinearLayout>        
+     
+
+</RelativeLayout>
+
+ 
