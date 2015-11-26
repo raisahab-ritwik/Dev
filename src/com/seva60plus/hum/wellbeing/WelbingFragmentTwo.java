@@ -145,7 +145,7 @@ public class WelbingFragmentTwo extends Fragment {
 		        }
 		    });
 	  
-	backBtn=(ImageView)view.findViewById(R.id.back);
+	backBtn=(ImageView)view.findViewById(R.id.iv_back);
   
 	backBtn.setOnClickListener(new View.OnClickListener() {
       @Override

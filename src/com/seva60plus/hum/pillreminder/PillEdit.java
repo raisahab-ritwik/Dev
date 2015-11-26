@@ -389,7 +389,7 @@ check7.setOnClickListener(new OnClickListener() {
 		
 		
 		
-		backBtn=(ImageView)findViewById(R.id.back);
+		backBtn=(ImageView)findViewById(R.id.iv_back);
 
 
 

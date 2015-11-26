@@ -22,7 +22,7 @@ import com.seva60plus.hum.util.ConnectionDetector;
 
 
  
-public class MediaCentreInternet extends Activity {
+public class MediaCentreTechnology extends Activity {
 
 	
 	ImageView backBtn,menuIcon;
@@ -82,7 +82,7 @@ public class MediaCentreInternet extends Activity {
 		
 		
 		
-		backBtn=(ImageView)findViewById(R.id.back);
+		backBtn=(ImageView)findViewById(R.id.iv_back);
         
 		backBtn.setOnClickListener(new View.OnClickListener() {
 	        @Override
@@ -100,7 +100,7 @@ public class MediaCentreInternet extends Activity {
 	        public void onClick(View view) {
 	        	
 	            // Take action.
-	        	Intent i = new Intent(MediaCentreInternet.this,Registration.class);
+	        	Intent i = new Intent(MediaCentreTechnology.this,Registration.class);
 	        	startActivity(i);
 	        	overridePendingTransition(0, 0);
 	        	finish();
@@ -123,7 +123,7 @@ public class MediaCentreInternet extends Activity {
 	        @Override
 	        public void onClick(View view) {
 	            // Take action.
-	        	Intent i = new Intent(MediaCentreInternet.this,MenuLay.class);
+	        	Intent i = new Intent(MediaCentreTechnology.this,MenuLay.class);
 	        	startActivity(i);
 	        	overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 	        	finish();
@@ -148,20 +148,20 @@ public class MediaCentreInternet extends Activity {
 		        }
 		    });
 		
-		 option1 = (RelativeLayout)findViewById(R.id.option1);
+		 option1 = (RelativeLayout)findViewById(R.id.rl_hum_training);
 			option1.setOnClickListener(new OnClickListener() {
 				
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					Intent i = new Intent(MediaCentreInternet.this,YouTubeMainActivity.class);
+					Intent i = new Intent(MediaCentreTechnology.this,YouTubeMainActivity.class);
 					i.putExtra("videocode", "oIMTM168BK8");
 					startActivity(i);
 					//Toast.makeText(getApplicationContext(), "Coming Soon!", Toast.LENGTH_SHORT).show();
 				}
 			});
 			
-			option2 = (RelativeLayout)findViewById(R.id.option2);
+			option2 = (RelativeLayout)findViewById(R.id.rl_doctor_speaks);
 			option2.setOnClickListener(new OnClickListener() {
 				
 				@Override
@@ -171,7 +171,7 @@ public class MediaCentreInternet extends Activity {
 					Toast.makeText(getApplicationContext(), "Coming Soon!", Toast.LENGTH_SHORT).show();
 				}
 			});
-			option3 = (RelativeLayout)findViewById(R.id.option3);
+			option3 = (RelativeLayout)findViewById(R.id.rl_financial_advisory);
 			option3.setOnClickListener(new OnClickListener() {
 				
 				@Override

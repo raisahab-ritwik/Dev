@@ -35,7 +35,7 @@
     
     
     <LinearLayout 
-        android:id="@+id/btn_lay1"
+        android:id="@+id/ll_hum_training"
         android:layout_width="fill_parent"
         android:layout_height="230dp"
         android:orientation="horizontal">
@@ -88,7 +88,7 @@
     </LinearLayout>
     
     <LinearLayout 
-        android:id="@+id/btn_lay2"
+        android:id="@+id/ll_financial_advisory"
         android:layout_width="fill_parent"
         android:layout_height="230dp"
         android:layout_marginTop="10dp"
@@ -143,7 +143,7 @@
     
     
     <LinearLayout 
-        android:id="@+id/btn_lay3"
+        android:id="@+id/ll_technology"
         android:layout_width="fill_parent"
         android:layout_height="230dp"
         android:layout_marginTop="10dp"
@@ -197,7 +197,7 @@
     </LinearLayout>
     
     <LinearLayout 
-        android:id="@+id/btn_lay4"
+        android:id="@+id/ll_food"
         android:layout_width="fill_parent"
         android:layout_height="230dp"
         android:layout_marginTop="10dp"

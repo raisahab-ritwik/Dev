@@ -22,14 +22,14 @@
      Creates a custom permission so only this app can receive its messages.
 
      NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
-           where PACKAGE is the application's package name.
+           where PACKAGE is the application's package name.
     -->
     <!--
     <permission
         android:name="com.seva60plus.seva60plus.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.seva60plus.seva60plus.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.seva60plus.seva60plus.permission.C2D_MESSAGE" />
     -->
     <!-- This app has permission to register and receive data message. -->
     <!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> -->
@@ -219,7 +219,7 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name="com.seva60plus.hum.mediacentre.MediaCentreDoctor"
+            android:name="com.seva60plus.hum.mediacentre.MediaCentreDoctorSpeaks"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
@@ -393,7 +393,7 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>
             -->
         </activity>
         <activity
@@ -481,7 +481,7 @@
 					<intent-filter>
 					  <action android:name="android.intent.action.PHONE_STATE" />
 					</intent-filter>
-				</receiver>
+				</receiver>
         -->
 
 
@@ -501,7 +501,7 @@
 
                 <category android:name="com.seva60plus.seva60plus" />
             </intent-filter>
-        </receiver>
+        </receiver>
         -->
 
 
@@ -603,7 +603,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
         <activity
-            android:name=".mediacentre.FullscreenDemoActivity"
+            android:name=".mediacentre.PlayVideoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/BlackNoTitleBarTheme" >
@@ -620,7 +620,7 @@
           handle received messages.
 
           By default, it must be named .GCMIntentService, unless the
-          application uses a custom BroadcastReceiver that redefines its name.
+          application uses a custom BroadcastReceiver that redefines its name.
         -->
         <!-- <service android:name="com.seva60plus.hum.GCMIntentService" /> -->
         <service android:name=".reminder.service.ScheduleService" />
@@ -638,6 +638,27 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name=".mediacentre.MediaCentreFinAdvisory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreFitness"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreArtNCulture"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreDocSpeaks"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".mediacentre.MediaCentreFood"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>

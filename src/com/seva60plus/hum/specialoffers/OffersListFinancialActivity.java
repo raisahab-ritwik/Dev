@@ -109,7 +109,7 @@ public class OffersListFinancialActivity extends Activity{
 		    });
         
 		
-		backBtnSub = (ImageView)findViewById(R.id.back);
+		backBtnSub = (ImageView)findViewById(R.id.iv_back);
 		backBtnSub.setOnClickListener(new OnClickListener() {
 			
 			@Override

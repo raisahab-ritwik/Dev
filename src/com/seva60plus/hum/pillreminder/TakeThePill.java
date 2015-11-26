@@ -158,7 +158,7 @@ public class TakeThePill extends ListActivity {
 		        }
 		    });
 			
-			back=(ImageView)findViewById(R.id.back);
+			back=(ImageView)findViewById(R.id.iv_back);
 	        
 			back.setOnClickListener(new View.OnClickListener() {
 			        @Override

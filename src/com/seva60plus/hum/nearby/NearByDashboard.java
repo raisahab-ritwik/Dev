@@ -261,7 +261,7 @@ public class NearByDashboard extends Activity {
 		    });
        
 		
-	ImageView	backBtnSub = (ImageView)findViewById(R.id.back);
+	ImageView	backBtnSub = (ImageView)findViewById(R.id.iv_back);
 		backBtnSub.setOnClickListener(new OnClickListener() {
 			
 			@Override

@@ -278,7 +278,7 @@ public class MainActivityMap extends Activity {
 		 }
 		 */
 
-		listlay = (RelativeLayout)findViewById(R.id.list_lay);
+		listlay = (RelativeLayout)findViewById(R.id.sv_items);
 		maplay = (RelativeLayout)findViewById(R.id.map_lay);
 
 		list = (ListView)findViewById(R.id.map_list);

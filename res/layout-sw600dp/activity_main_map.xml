@@ -83,7 +83,7 @@
         android:layout_height="500dp"
         android:layout_marginTop="10dp"
         android:visibility="gone"
-        android:layout_above="@+id/list_lay"
+        android:layout_above="@+id/sv_items"
         android:layout_below="@+id/subheaderLay1">
     
     <fragment
@@ -96,7 +96,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/list_lay"
+        android:id="@+id/sv_items"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
        

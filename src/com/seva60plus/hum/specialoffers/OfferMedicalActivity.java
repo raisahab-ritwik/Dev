@@ -48,7 +48,7 @@ public class OfferMedicalActivity extends FragmentActivity {
 		cd = new ConnectionDetector(getApplicationContext());// by Dibyendu
 		lm = (LocationManager) getSystemService(LOCATION_SERVICE);// by Dibyendu
 		
-		backBtnSub = (ImageView)findViewById(R.id.back);
+		backBtnSub = (ImageView)findViewById(R.id.iv_back);
 		backBtnSub.setOnClickListener(new OnClickListener() {
 			
 			@Override

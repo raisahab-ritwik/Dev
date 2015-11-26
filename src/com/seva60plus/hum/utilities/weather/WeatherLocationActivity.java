@@ -73,7 +73,7 @@ public class WeatherLocationActivity extends Activity implements OnClickListener
  		    });
  		 
  		  
- 		backBtn=(ImageView)findViewById(R.id.back);
+ 		backBtn=(ImageView)findViewById(R.id.iv_back);
          
  		backBtn.setOnClickListener(new View.OnClickListener() {
  	        @Override

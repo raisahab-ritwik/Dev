@@ -15,7 +15,6 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -29,16 +28,15 @@ import com.seva60plus.hum.customview.NoInternetPage;
 import com.seva60plus.hum.model.Video;
 import com.seva60plus.hum.util.Util;
 
-public class MediaHumTraning extends Activity implements VideoPlayListListener {
+public class MediaCentreHumTraining extends Activity implements VideoPlayListListener {
 
-	ImageView backBtn, menuIcon;
-	RelativeLayout backSetup;
-	Button whatsapp, fb, twitter;
+	private ImageView backBtn, menuIcon;
+	private RelativeLayout backSetup;
+	private Button whatsapp, fb, twitter;
 
-	Dialog progress;
+	private Dialog progress;
 	private AnimationDrawable progressAnimation;
 
-	String eMsg = "";
 	private ListView listView_youtubePlaylist;
 
 	@Override
@@ -48,7 +46,7 @@ public class MediaHumTraning extends Activity implements VideoPlayListListener {
 
 		//------START------------For Progress Spinner--------------
 
-		progress = new Dialog(MediaHumTraning.this);
+		progress = new Dialog(MediaCentreHumTraining.this);
 		progress.getWindow().setBackgroundDrawableResource(R.drawable.spinner_dialog_backround);
 
 		//Remove the Title
@@ -114,12 +112,11 @@ public class MediaHumTraning extends Activity implements VideoPlayListListener {
 			}
 		});
 
-		backBtn = (ImageView) findViewById(R.id.back);
+		backBtn = (ImageView) findViewById(R.id.iv_back);
 
 		backBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				// Take action.
 				finish();
 
 			}
@@ -131,7 +128,7 @@ public class MediaHumTraning extends Activity implements VideoPlayListListener {
 			@Override
 			public void onClick(View view) {
 
-				Intent i = new Intent(MediaHumTraning.this, Registration.class);
+				Intent i = new Intent(MediaCentreHumTraining.this, Registration.class);
 				startActivity(i);
 				overridePendingTransition(0, 0);
 				finish();
@@ -144,7 +141,7 @@ public class MediaHumTraning extends Activity implements VideoPlayListListener {
 			@Override
 			public void onClick(View view) {
 				// Take action.
-				Intent i = new Intent(MediaHumTraning.this, MenuLay.class);
+				Intent i = new Intent(MediaCentreHumTraining.this, MenuLay.class);
 				startActivity(i);
 				overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 				finish();
@@ -193,10 +190,8 @@ public class MediaHumTraning extends Activity implements VideoPlayListListener {
 		Intent whatsappIntent = new Intent(Intent.ACTION_SEND);
 		whatsappIntent.setType("text/plain");
 		whatsappIntent.setPackage("com.whatsapp");
-		whatsappIntent
-				.putExtra(
-						Intent.EXTRA_TEXT,
-						"Please spread the word : Seva60Plus HUM Download Link : https://play.google.com/store/apps/details?id=com.seva60plus.hum");
+		whatsappIntent.putExtra(Intent.EXTRA_TEXT,
+				"Please spread the word : Seva60Plus HUM Download Link : https://play.google.com/store/apps/details?id=com.seva60plus.hum");
 		try {
 			startActivity(whatsappIntent);
 		} catch (android.content.ActivityNotFoundException ex) {
@@ -207,36 +202,21 @@ public class MediaHumTraning extends Activity implements VideoPlayListListener {
 
 	private void showYoutubeVideo() {
 
-		
-		YoutubePlaylistAsync playlistAsync = new YoutubePlaylistAsync(MediaHumTraning.this);
-		playlistAsync.mListener = MediaHumTraning.this;
+		YoutubePlaylistAsync playlistAsync = new YoutubePlaylistAsync(MediaCentreHumTraining.this,"PLvwCLxrZQZteEfIME0GwW4GNDnBWZpI4C");
+		playlistAsync.mListener = MediaCentreHumTraining.this;
 		playlistAsync.execute();
 	}
+
 	@Override
 	public void videoPlaylistAsyncCallback(final ArrayList<Video> result) {
 		if (result.size() > 0) {
-			VideoAdapter mAdapter = new VideoAdapter(MediaHumTraning.this, result);
+			VideoAdapter mAdapter = new VideoAdapter(MediaCentreHumTraining.this, result);
 
-			listView_youtubePlaylist.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-				@Override
-				public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-
-				}
-
-				@Override
-				public void onNothingSelected(AdapterView<?> arg0) {
-					// TODO Auto-generated method stub
-
-				}
-			});
 			listView_youtubePlaylist.setOnItemClickListener(new OnItemClickListener() {
 
 				@Override
 				public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-					// TODO Auto-generated method stub
-					// TODO Auto-generated method stub
-					Intent i = new Intent(MediaHumTraning.this, FullscreenDemoActivity.class);
+					Intent i = new Intent(MediaCentreHumTraining.this, PlayVideoActivity.class);
 					i.putExtra("videocode", result.get(arg2).getUrl());
 					i.putExtra("videoDescription", result.get(arg2).getVideoDescription());
 					startActivity(i);

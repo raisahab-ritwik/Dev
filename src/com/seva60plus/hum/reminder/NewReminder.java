@@ -135,7 +135,7 @@ remDate.setFocusable(true);
     scheduleClient = new ScheduleClient(this);
     scheduleClient.doBindService();
     
-    backBtnSub = (ImageView)findViewById(R.id.back);
+    backBtnSub = (ImageView)findViewById(R.id.iv_back);
 	backBtnSub.setOnClickListener(new OnClickListener() {
 		
 		@Override

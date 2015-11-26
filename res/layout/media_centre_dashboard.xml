@@ -20,7 +20,7 @@
         android:background="#FFF" >
 
         <ImageView
-            android:id="@+id/back"
+            android:id="@+id/iv_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -42,7 +42,7 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/content_close"
+        android:id="@+id/ll_content_close"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:layout_above="@+id/footerLay"
@@ -58,7 +58,7 @@
             android:orientation="vertical" >
 
             <ScrollView
-                android:id="@+id/list_lay"
+                android:id="@+id/sv_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -73,20 +73,20 @@
                     android:orientation="vertical" >
 
                     <LinearLayout
-                        android:id="@+id/btn_lay1"
+                        android:id="@+id/ll_hum_training"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal" >
 
                         <RelativeLayout
-                            android:id="@+id/option1"
+                            android:id="@+id/rl_hum_training"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@drawable/hum_training" >
 
                             <TextView
-                                android:id="@+id/option1_text"
+                                android:id="@+id/tv_hum_training"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -99,7 +99,7 @@
                         </RelativeLayout>
 
                         <RelativeLayout
-                            android:id="@+id/option2"
+                            android:id="@+id/rl_doctor_speaks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -107,7 +107,7 @@
                             android:background="@drawable/media_doctorspeaks" >
 
                             <TextView
-                                android:id="@+id/option2_text"
+                                android:id="@+id/tv_doctor_speaks"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -121,21 +121,21 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/btn_lay2"
+                        android:id="@+id/ll_financial_advisory"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal" >
 
                         <RelativeLayout
-                            android:id="@+id/option3"
+                            android:id="@+id/rl_financial_advisory"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@drawable/media_financialadvisory" >
 
                             <TextView
-                                android:id="@+id/option3_text"
+                                android:id="@+id/tv_financial_advisory"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -148,7 +148,7 @@
                         </RelativeLayout>
 
                         <RelativeLayout
-                            android:id="@+id/option4"
+                            android:id="@+id/rl_fitness"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -156,7 +156,7 @@
                             android:background="@drawable/media_fitness" >
 
                             <TextView
-                                android:id="@+id/option4_text"
+                                android:id="@+id/tv_fitness"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -170,21 +170,21 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/btn_lay3"
+                        android:id="@+id/ll_technology"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal" >
 
                         <RelativeLayout
-                            android:id="@+id/option5"
+                            android:id="@+id/rl_technology"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@drawable/media_internet" >
 
                             <TextView
-                                android:id="@+id/option5_text"
+                                android:id="@+id/tv_technology"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -197,7 +197,7 @@
                         </RelativeLayout>
 
                         <RelativeLayout
-                            android:id="@+id/option6"
+                            android:id="@+id/rl_art_and_culture"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -205,7 +205,7 @@
                             android:background="@drawable/media_art" >
 
                             <TextView
-                                android:id="@+id/option6_text"
+                                android:id="@+id/tv_art_and_culture"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -219,21 +219,21 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/btn_lay4"
+                        android:id="@+id/ll_food"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal" >
 
                         <RelativeLayout
-                            android:id="@+id/option7"
+                            android:id="@+id/rl_food"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:background="@drawable/media_food" >
 
                             <TextView
-                                android:id="@+id/option7_text"
+                                android:id="@+id/tv_food"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -246,7 +246,7 @@
                         </RelativeLayout>
 
                         <RelativeLayout
-                            android:id="@+id/option8"
+                            android:id="@+id/rl_travel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
@@ -255,7 +255,7 @@
                             android:visibility="visible" >
 
                             <TextView
-                                android:id="@+id/option8_text"
+                                android:id="@+id/tv_travel"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"

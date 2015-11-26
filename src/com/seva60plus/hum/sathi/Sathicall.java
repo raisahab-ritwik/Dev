@@ -385,7 +385,7 @@ public class Sathicall extends Activity {
         Typeface font = Typeface.createFromAsset(getAssets(), "openSansBold.ttf");
         headerTitleText.setTypeface(font);
         
-        backBtn=(ImageView)findViewById(R.id.back);
+        backBtn=(ImageView)findViewById(R.id.iv_back);
         
 		backBtn.setOnClickListener(new View.OnClickListener() {
 	        @Override

@@ -329,7 +329,7 @@ public class DayViewFragment extends Fragment {
            }
        });
        
-       backBtnSub = (ImageView)view.findViewById(R.id.back);
+       backBtnSub = (ImageView)view.findViewById(R.id.iv_back);
 		backBtnSub.setOnClickListener(new OnClickListener() {
 			
 			@Override

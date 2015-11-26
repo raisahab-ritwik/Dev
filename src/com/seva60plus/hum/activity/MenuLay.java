@@ -70,7 +70,7 @@ public class MenuLay extends Activity {
 		});
 
 
-		option1 = (RelativeLayout)findViewById(R.id.option1);
+		option1 = (RelativeLayout)findViewById(R.id.rl_hum_training);
 		option1.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -83,7 +83,7 @@ public class MenuLay extends Activity {
 			}
 		});
 
-		option2 = (RelativeLayout)findViewById(R.id.option2);
+		option2 = (RelativeLayout)findViewById(R.id.rl_doctor_speaks);
 		option2.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -95,7 +95,7 @@ public class MenuLay extends Activity {
 				finish();
 			}
 		});
-		option3 = (RelativeLayout)findViewById(R.id.option3);
+		option3 = (RelativeLayout)findViewById(R.id.rl_financial_advisory);
 		option3.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -107,7 +107,7 @@ public class MenuLay extends Activity {
 				finish();
 			}
 		});
-		option4 = (RelativeLayout)findViewById(R.id.option4);
+		option4 = (RelativeLayout)findViewById(R.id.rl_fitness);
 		option4.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -119,7 +119,7 @@ public class MenuLay extends Activity {
 				finish();
 			}
 		});
-		option5 = (RelativeLayout)findViewById(R.id.option5);
+		option5 = (RelativeLayout)findViewById(R.id.rl_technology);
 		option5.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -158,7 +158,7 @@ public class MenuLay extends Activity {
 
 			}
 		});
-		option6 = (RelativeLayout)findViewById(R.id.option6);
+		option6 = (RelativeLayout)findViewById(R.id.rl_art_and_culture);
 		option6.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -196,7 +196,7 @@ public class MenuLay extends Activity {
 
 			}
 		});
-		option7 = (RelativeLayout)findViewById(R.id.option7);
+		option7 = (RelativeLayout)findViewById(R.id.rl_food);
 		option7.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -208,7 +208,7 @@ public class MenuLay extends Activity {
 				finish();
 			}
 		});
-		option8 = (RelativeLayout)findViewById(R.id.option8);
+		option8 = (RelativeLayout)findViewById(R.id.rl_travel);
 		option8.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -251,7 +251,7 @@ public class MenuLay extends Activity {
 			}
 		});
 
-		contentClose = (LinearLayout)findViewById(R.id.content_close);
+		contentClose = (LinearLayout)findViewById(R.id.ll_content_close);
 		contentClose.setOnClickListener(new OnClickListener() {
 
 			@Override

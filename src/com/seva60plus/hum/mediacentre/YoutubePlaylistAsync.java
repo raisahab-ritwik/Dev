@@ -24,36 +24,40 @@ import android.util.Log;
 import com.seva60plus.hum.model.Video;
 import com.seva60plus.hum.util.StreamUtils;
 
-public class YoutubePlaylistAsync extends AsyncTask<Void, Void, ArrayList<Video>>{
+public class YoutubePlaylistAsync extends AsyncTask<Void, Void, ArrayList<Video>> {
 
 	private ProgressDialog progress;
-	VideoPlayListListener mListener;
-	public YoutubePlaylistAsync(Context context) {
-		
+	public VideoPlayListListener mListener;
+	private String playlistId;
+
+	public YoutubePlaylistAsync(Context context, String playlistId) {
+
 		progress = new ProgressDialog(context);
 		progress.setCancelable(true);
 		progress.setMessage("Please wait..");
 		progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		this.playlistId = playlistId;
 
 	}
+
 	@Override
 	protected void onPreExecute() {
 		super.onPreExecute();
-		if(!progress.isShowing()){
-			
+		if (!progress.isShowing()) {
+
 			progress.show();
 		}
 	}
+
 	@Override
 	protected ArrayList<Video> doInBackground(Void... params) {
-		ArrayList<Video> videoList=new ArrayList<Video>();
+		ArrayList<Video> videoList = new ArrayList<Video>();
 		try {
 			// Get a httpclient to talk to the internet
 			HttpClient client = new DefaultHttpClient();
 			// Perform a GET request to YouTube for a JSON list of all the videos by a specific user
-			HttpUriRequest request = new HttpGet(
-					"https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLvwCLxrZQZteEfIME0GwW4GNDnBWZpI4C" +
-					"&maxResults=50&key=AIzaSyAKgCx_f4jAfwjgrIbV5ZCXqyuwpk-oK5o");
+			HttpUriRequest request = new HttpGet("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId="
+					+ playlistId + "&maxResults=25&key=AIzaSyAKgCx_f4jAfwjgrIbV5ZCXqyuwpk-oK5o");
 
 			HttpResponse response = client.execute(request);
 			String jsonString = StreamUtils.convertToString(response.getEntity().getContent());
@@ -61,27 +65,27 @@ public class YoutubePlaylistAsync extends AsyncTask<Void, Void, ArrayList<Video>
 
 			JSONArray jsonArray = new JSONArray(json.optString("items"));
 			for (int i = 0; i < jsonArray.length(); i++) {
-				
+
 				JSONObject jsonObject = jsonArray.getJSONObject(i);
-				
+
 				JSONObject snippetObj = new JSONObject(jsonObject.optString("snippet"));
-				String title=snippetObj.optString("title");
-				System.out.println("Snippet: "+snippetObj.toString() );
-				
-				String description=snippetObj.optString("description");
-				JSONObject thumbnailsObject=new JSONObject(snippetObj.optString("thumbnails"));
-				
-				JSONObject mediumObject=new JSONObject(thumbnailsObject.optString("medium"));
-				
-				String mediumThumbNailUrl=mediumObject.optString("url");
-				
-				JSONObject resourceIdObject=new JSONObject(snippetObj.optString("resourceId"));
-				String videoId=resourceIdObject.optString("videoId");
-				
-				Drawable thumbDrawable=LoadImageFromWebOperations(mediumThumbNailUrl);
-				Video video=new Video(title, videoId,thumbDrawable,description);
+				String title = snippetObj.optString("title");
+				System.out.println("Snippet: " + snippetObj.toString());
+
+				String description = snippetObj.optString("description");
+				JSONObject thumbnailsObject = new JSONObject(snippetObj.optString("thumbnails"));
+
+				JSONObject mediumObject = new JSONObject(thumbnailsObject.optString("medium"));
+
+				String mediumThumbNailUrl = mediumObject.optString("url");
+
+				JSONObject resourceIdObject = new JSONObject(snippetObj.optString("resourceId"));
+				String videoId = resourceIdObject.optString("videoId");
+
+				Drawable thumbDrawable = LoadImageFromWebOperations(mediumThumbNailUrl);
+				Video video = new Video(title, videoId, thumbDrawable, description);
 				videoList.add(video);
-				
+
 			}
 		} catch (ClientProtocolException e) {
 			e.printStackTrace();
@@ -99,10 +103,11 @@ public class YoutubePlaylistAsync extends AsyncTask<Void, Void, ArrayList<Video>
 	@Override
 	protected void onPostExecute(ArrayList<Video> result) {
 		super.onPostExecute(result);
-		if(progress.isShowing())
+		if (progress.isShowing())
 			progress.dismiss();
 		mListener.videoPlaylistAsyncCallback(result);
 	}
+
 	public static Drawable LoadImageFromWebOperations(String url) {
 		try {
 			InputStream is = (InputStream) new URL(url).getContent();

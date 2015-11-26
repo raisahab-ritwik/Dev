@@ -22,7 +22,7 @@
         android:background="#FFF">
         
         <ImageView
-            android:id="@+id/back"
+            android:id="@+id/iv_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -68,7 +68,7 @@
     
     
     <LinearLayout 
-        android:id="@+id/btn_lay1"
+        android:id="@+id/ll_hum_training"
         android:layout_width="fill_parent"
         android:layout_height="220dp"
         android:gravity="center_horizontal"
@@ -126,7 +126,7 @@
     </LinearLayout>
     
     <LinearLayout 
-        android:id="@+id/btn_lay2"
+        android:id="@+id/ll_financial_advisory"
         android:layout_width="fill_parent"
         android:layout_height="220dp"
         android:gravity="center_horizontal"
@@ -232,7 +232,7 @@
     
     
     <LinearLayout 
-        android:id="@+id/btn_lay3"
+        android:id="@+id/ll_technology"
         android:visibility="gone"
         android:layout_width="fill_parent"
         android:layout_height="220dp"
@@ -332,7 +332,7 @@
     </LinearLayout>
     
     <LinearLayout 
-        android:id="@+id/btn_lay4"
+        android:id="@+id/ll_food"
         android:layout_width="fill_parent"
         android:layout_height="220dp"
         android:layout_marginTop="5dp"

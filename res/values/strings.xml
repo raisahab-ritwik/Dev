@@ -1070,7 +1070,8 @@
     <!-- Media Centre -->
     <string name="hum_training_title_text">HUM TRAINING</string>
     <string name="splash_termsandcondition_text">By continuing I agree to Seva60Plus Terms of Service and Privacy Policy.</string>
-
+	<string name="fin_advisory_title_txt">FINANCIAL ADVISORY</string>
+    
     <!-- Youtube Player -->
     <string name="error_player_ytube">There was an error initializing the YouTubePlayer (%1$s)</string>
     <string name="fullscreen_tutorial">Enter fullscreen either by using the player controller or by  using the Enter Fullscreen button.</string>

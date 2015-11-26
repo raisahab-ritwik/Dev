@@ -144,7 +144,7 @@ public class WelbingActivityExercise extends Activity {
  		 
  		 
  	  
- 	backBtn=(ImageView)findViewById(R.id.back);
+ 	backBtn=(ImageView)findViewById(R.id.iv_back);
    
  	backBtn.setOnClickListener(new View.OnClickListener() {
        @Override

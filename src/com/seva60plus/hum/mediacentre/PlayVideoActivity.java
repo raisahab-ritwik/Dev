@@ -42,7 +42,7 @@ import android.widget.TextView;
  * This is the preferred way of handling fullscreen because the default
  * fullscreen implementation will cause re-buffering of the video.
  */
-public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity implements View.OnClickListener,
+public class PlayVideoActivity extends YouTubeFailureRecoveryActivity implements View.OnClickListener,
 		CompoundButton.OnCheckedChangeListener, YouTubePlayer.OnFullscreenListener {
 
 	private static final int PORTRAIT_ORIENTATION = Build.VERSION.SDK_INT < 9 ? ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -78,14 +78,14 @@ public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity imple
 		YOUTUBE_VIDEO_DESCRIPTION = intObj.getStringExtra("videoDescription");
 
 		doLayout();
-		
+
 	}
 
 	@Override
 	public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer player, boolean wasRestored) {
 		this.player = player;
 		setControlsEnabled();
-		// Specify that we want to handle fullscreen behavior ourselves.
+
 		player.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CUSTOM_LAYOUT);
 		player.setOnFullscreenListener(this);
 		if (!wasRestored) {
@@ -107,12 +107,7 @@ public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity imple
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		int controlFlags = player.getFullscreenControlFlags();
 		if (isChecked) {
-			// If you use the FULLSCREEN_FLAG_ALWAYS_FULLSCREEN_IN_LANDSCAPE, your activity's normal UI
-			// should never be laid out in landscape mode (since the video will be fullscreen whenever the
-			// activity is in landscape orientation). Therefore you should set the activity's requested
-			// orientation to portrait. Typically you would do this in your AndroidManifest.xml, we do it
-			// programmatically here since this activity demos fullscreen behavior both with and without
-			// this flag).
+
 			setRequestedOrientation(PORTRAIT_ORIENTATION);
 			controlFlags |= YouTubePlayer.FULLSCREEN_FLAG_ALWAYS_FULLSCREEN_IN_LANDSCAPE;
 		} else {
@@ -125,15 +120,13 @@ public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity imple
 	private void doLayout() {
 		LinearLayout.LayoutParams playerParams = (LinearLayout.LayoutParams) playerView.getLayoutParams();
 		if (fullscreen) {
-			// When in fullscreen, the visibility of all other views than the player should be set to
-			// GONE and the player should be laid out across the whole screen.
+
 			playerParams.width = LayoutParams.MATCH_PARENT;
 			playerParams.height = LayoutParams.MATCH_PARENT;
 
 			otherViews.setVisibility(View.GONE);
 		} else {
-			// This layout is up to you - this is just a simple example (vertically stacked boxes in
-			// portrait, horizontally stacked in landscape).
+
 			otherViews.setVisibility(View.VISIBLE);
 			ViewGroup.LayoutParams otherViewsParams = otherViews.getLayoutParams();
 			if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -154,8 +147,7 @@ public class FullscreenDemoActivity extends YouTubeFailureRecoveryActivity imple
 	}
 
 	private void setControlsEnabled() {
-//		checkbox.setEnabled(player != null
-//				&& getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT);
+
 		fullscreenButton.setEnabled(player != null);
 	}
 

@@ -75,8 +75,13 @@ public class SplashActivity extends Activity {
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-		subId = tm.getSubscriberId().toString();
-
+		try {
+			Log.i("Device id", tm.getDeviceId());
+			Log.v("Subscriber Id", "" + tm.getSubscriberId().toString());
+			subId = tm.getSubscriberId().toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
 		regValue = prefs.getString("regValue", "");
 
@@ -159,11 +164,12 @@ public class SplashActivity extends Activity {
 		});
 
 	}
+
 	/**
 	 * call broadcost reciver for send sms
 	 */
 	private void fireAlarm() {
-		
+
 		Intent intent = new Intent(this, PostDataStatices.class);
 		intent.setAction("com.seva60Plus.alarm.ACTION");
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(SplashActivity.this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
@@ -175,11 +181,12 @@ public class SplashActivity extends Activity {
 		alarm.cancel(pendingIntent);
 		alarm.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
 	}
+
 	/**
 	 * call broadcost reciver for send sms
 	 */
 	private void fireAlarm2() {
-		
+
 		Intent intent = new Intent(this, PostDataStatices.class);
 		intent.setAction("com.seva60Plus.alarm.ACTION");
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(SplashActivity.this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
@@ -191,11 +198,12 @@ public class SplashActivity extends Activity {
 		alarm.cancel(pendingIntent);
 		alarm.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
 	}
+
 	/**
 	 * call broadcost reciver for send sms
 	 */
 	private void fireAlarm3() {
-		
+
 		Intent intent = new Intent(this, PostDataStatices.class);
 		intent.setAction("com.seva60Plus.alarm.ACTION");
 		PendingIntent pendingIntent = PendingIntent.getBroadcast(SplashActivity.this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
@@ -227,7 +235,7 @@ public class SplashActivity extends Activity {
 			runOnUiThread(new Runnable() {
 				public void run() {
 					try {
-						
+
 						Date dt = new Date();
 
 						int hours = dt.getHours();
@@ -271,11 +279,11 @@ public class SplashActivity extends Activity {
 		}
 
 		private String checkUser() {
-			
+
 			try {
-				
+
 				if (!regValue.equals("OK")) {
-					
+
 					isInternetPresent = Util.isInternetAvailable(mContext);
 					// check for Internet status
 					Log.i(TAG, "Reg Value: " + regValue);
@@ -286,7 +294,8 @@ public class SplashActivity extends Activity {
 						String str2 = "";
 						HttpResponse response2;
 						HttpClient myClient2 = new DefaultHttpClient();
-						HttpPost myConnection2 = new HttpPost("http://seva60plus.co.in/seva60PlusAndroidAPI/register/checkUserRegistered/" + subId);
+						HttpPost myConnection2 = new HttpPost("http://seva60plus.co.in/seva60PlusAndroidAPI/register/checkUserRegistered/"
+								+ subId);
 
 						try {
 							response2 = myClient2.execute(myConnection2);
@@ -297,7 +306,7 @@ public class SplashActivity extends Activity {
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
-						System.out.println("Json Sarted.... "+str2);
+						System.out.println("Json Sarted.... " + str2);
 						try {
 							JSONArray jArray2 = new JSONArray(str2);
 							json2 = jArray2.getJSONObject(0);
@@ -330,7 +339,7 @@ public class SplashActivity extends Activity {
 					}
 
 				} else {
-					
+
 					Intent myIntent = new Intent(SplashActivity.this, DashboardActivity.class);
 					startActivity(myIntent);
 
@@ -351,6 +360,5 @@ public class SplashActivity extends Activity {
 		}
 
 	}
-
 
 }

@@ -107,7 +107,7 @@ public class WeatherFirstActivity extends Activity {
 		
 		cd = new ConnectionDetector(getApplicationContext());// by Dibyendu
 		
-		text_city = (TextView)findViewById(R.id.textView1);
+		text_city = (TextView)findViewById(R.id.tv_fin_advisory);
 		
 		LinearLayout banner=(LinearLayout)findViewById(R.id.footerLay);
         
@@ -126,7 +126,7 @@ public class WeatherFirstActivity extends Activity {
 		        }
 		    });
 	  
-	backBtn=(ImageView)findViewById(R.id.back);
+	backBtn=(ImageView)findViewById(R.id.iv_back);
   
 	backBtn.setOnClickListener(new View.OnClickListener() {
       @Override

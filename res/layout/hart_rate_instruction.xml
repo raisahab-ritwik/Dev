@@ -22,7 +22,7 @@
         android:background="#FFF">
         
         <ImageView
-            android:id="@+id/back"
+            android:id="@+id/iv_back"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -32,7 +32,7 @@
             android:textColor="#FFF" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/tv_fin_advisory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"

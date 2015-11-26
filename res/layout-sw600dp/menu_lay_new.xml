@@ -7,7 +7,7 @@
             android:background="@android:color/transparent">
             
     <LinearLayout 
-			android:id="@+id/content_close"
+			android:id="@+id/ll_content_close"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
             android:background="#90000000"
@@ -41,7 +41,7 @@
     </RelativeLayout>
             
 <ScrollView
-    android:id="@+id/list_lay"
+    android:id="@+id/sv_items"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:background="#2C3948"
@@ -71,7 +71,7 @@
             
             </RelativeLayout>
             <RelativeLayout
-                android:id="@+id/option1"
+                android:id="@+id/rl_hum_training"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
@@ -87,7 +87,7 @@
                     android:src="@drawable/pill_logo" />
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/tv_fin_advisory"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
@@ -129,7 +129,7 @@
             </RelativeLayout>
             
             <RelativeLayout
-                android:id="@+id/option2"
+                android:id="@+id/rl_doctor_speaks"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="#283341" >
@@ -159,7 +159,7 @@
             </RelativeLayout>
             
             <RelativeLayout
-                android:id="@+id/option3"
+                android:id="@+id/rl_financial_advisory"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="#293644" >
@@ -188,7 +188,7 @@
             </RelativeLayout>
             
             <RelativeLayout
-                android:id="@+id/option4"
+                android:id="@+id/rl_fitness"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="#283341" >
@@ -217,7 +217,7 @@
             </RelativeLayout>
             
             <RelativeLayout
-                android:id="@+id/option5"
+                android:id="@+id/rl_technology"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="#293644" >
@@ -247,7 +247,7 @@
             </RelativeLayout>
             
             <RelativeLayout
-                android:id="@+id/option6"
+                android:id="@+id/rl_art_and_culture"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="#283341" >
@@ -275,7 +275,7 @@
             </RelativeLayout>
             
             <RelativeLayout
-                android:id="@+id/option7"
+                android:id="@+id/rl_food"
         android:layout_height="80dp"
         android:layout_width="match_parent"
         android:background="#293644" >
@@ -303,7 +303,7 @@
             </RelativeLayout>
             
             <RelativeLayout
-         android:id="@+id/option8"
+         android:id="@+id/rl_travel"
         android:layout_height="40dp"
         android:layout_width="match_parent"
         android:background="#283341"

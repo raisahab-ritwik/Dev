@@ -52,7 +52,7 @@ public class KnowledgeBaseVideo extends Activity {
 		
 		cd = new ConnectionDetector(getApplicationContext());// by Dibyendu
 		
-		backBtn=(ImageView)findViewById(R.id.back);
+		backBtn=(ImageView)findViewById(R.id.iv_back);
         
 		backBtn.setOnClickListener(new View.OnClickListener() {
 	        @Override
